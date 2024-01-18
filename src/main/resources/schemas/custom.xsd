@@ -32,5 +32,7 @@
       <xs:element name="item" type="nxs:content" minOccurs="0" maxOccurs="unbounded"/> 
     </xs:sequence> 
   </xs:complexType>  
-  <xs:element name="string" type="xs:string" nillable="false" nxsv:nillable="false"/>
+  <xs:element name="mvstring1" type="nxs:stringList"/>
+  <xs:element name="mvstring2" type="nxs:stringList"/>
+  <xs:element name="integer" type="xs:integer"/>
 </xs:schema>
