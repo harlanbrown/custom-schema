@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nxs="http://www.nuxeo.org/ecm/project/schemas/sample/custom" xmlns:nxsv="http://www.nuxeo.org/ecm/schemas/core/validation/" xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/" targetNamespace="http://www.nuxeo.org/ecm/project/schemas/sample/custom">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nxs="http://www.nuxeo.org/ecm/project/schemas/epa-enterprise-rm/arms" xmlns:nxsv="http://www.nuxeo.org/ecm/schemas/core/validation/" xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/" targetNamespace="http://www.nuxeo.org/ecm/project/schemas/epa-enterprise-rm/arms">  
   <!-- helper XSD definitions for list types -->  
   <xs:complexType name="content"> 
     <xs:sequence> 
@@ -32,13 +32,13 @@
       <xs:element name="item" type="nxs:content" minOccurs="0" maxOccurs="unbounded"/> 
     </xs:sequence> 
   </xs:complexType>  
-  <xs:element name="custom1" type="nxs:custom_custom1ListType"/>
-  <xs:complexType name="custom_custom1ListType">
+  <xs:element name="partner_application" type="nxs:arms_partner_applicationListType"/>
+  <xs:complexType name="arms_partner_applicationListType">
     <xs:sequence>
-      <xs:element name="item" type="nxs:custom_custom1Type" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="item" type="nxs:arms_partner_applicationType" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="custom_custom1Type">
+  <xs:complexType name="arms_partner_applicationType">
     <xs:sequence>
       <xs:element name="name" type="xs:string"/>
       <xs:element name="data" type="nxs:stringList"/>
